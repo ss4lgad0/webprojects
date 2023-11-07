@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de interés compuesto</title>
+    <!-- Links CSS -->
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+    <link rel="stylesheet" type="text/css" href="/calculadora.css">
+    <!-- Librería de iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="body">
+    <header class="header">
+        <div class="header-div">
+            <h1 class="titulo">
+                <a id="titulo-img" href="index.html">
+                    <img class="logo" src="/img/dolar.png" alt="Logo">
+                </a>
+                
+                <a id="titulo" href="index.html">
+                    Calculadora de interés compuesto
+                </a>
+            </h1>
+              
+            <nav>
+                <a href="funcionamiento.html">Funcionamiento</a>
+                <a href="info.html">Más información</a>
+                <a href="otros.html">Otros proyectos</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Inicio de Calculadora -->
+        <section class="calculadora">
+
+            <label for="inicial">
+                <p class="texto-calculadora">Capital inicial:</p>
+                    <input autocomplete="off" id="inicial" class="texto-calculadora" type="text" placeholder="Ingrese el capital inicial"><span> €</span>
+            </label>
+            <label for="aportacion">
+                <p class="texto-calculadora">Aportación anual:</p>
+                    <input autocomplete="off" id="aportacion" class="texto-calculadora" type="text" placeholder="Ingrese la aportación anual"><span> €</span>
+            </label>
+            <label for="duracion">
+                <p class="texto-calculadora">Duración de la inversión (años):</p>
+                    <input autocomplete="off" id="duracion" class="texto-calculadora" type="text" placeholder="Ingrese el número de años de la inversión">
+            </label>
+            <label for="tasa">
+                <p class="texto-calculadora">Tasa de interés anual (%):</p>
+                    <input autocomplete="off" id="tasa" class="texto-calculadora" type="text" placeholder="Ingrese la tasa de interés anual">
+            </label>
+            
+            <div class="opciones-calculadora">
+                <button id="calcular" class="boton">CALCULAR</button>
+                <button id="borrar" class="boton">BORRAR</button>
+            </div>
+            
+            <p id="resultado" class="texto-calculadora resultado"></p>
+            <span class="texto-calculadora pensando"></span>
+            
+        </section>
+        <!-- Final de Calculadora -->
+
+        <!-- Inicio de Instrucciones -->
+        <section class="instrucciones">
+
+            <h2 class="titulo-seccion">
+                Instrucciones:
+            </h2>
+            <p>Introduzca las cantidades para el cálculo del capital futuro. A continuación se detalla más información:</p>
+            <ul type="square">
+                <li class="lista">
+                    <span class="resaltar">Capital inicial</span> cantidad con la que se iniciará la inversión. 
+                    Capitalizará desde el primer momento hasta el final del tiempo indicado. El valor del campo debe ser mayor a cero.
+                </li>
+                <li class="lista">
+                    <span class="resaltar">Aportación anual</span> cantidad que se suma al valor del capital inicial cada año. 
+                    El valor del campo debe ser mayor a cero.
+                </li >
+                <li class="lista">
+                    <span class="resaltar">Duración de la inversión</span> tiempo (en años) que se tiene previsto mantener la inversión para el cálculo de los intereses.
+                </li>
+                <li class="lista">
+                    <span class="resaltar">Tasa de interés anual</span> porcentaje que crecerá el capital total en función del capital inicial y las aportaciones anuales.
+                    Si no sabe qué esperar, en el caso de que esté estimando en el mercado bursátil, puede utilizar como aproximación la tasa de crecimiento promedio del S&P500,
+                    que es de en torno al 8% anual.
+                </li>
+            </ul>
+            <p>Para que los cálculos sean correctos, las cantidades deben ser positivas.</p>
+
+            <div class="bolsa">
+                <img src="/img/acciones.jpg" alt="Bolsa">
+            </div>
+            
+        </section>
+        <!-- Final de Instrucciones -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div>
+            <p>Versión 1.0</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="javascript.js"></script>
+</body>
+</html>
